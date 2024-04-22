@@ -200,11 +200,12 @@ body {
     left: 50%;
     width: 400px;
     height: 340px;
-    background-color: #fff;
-    border: 1px solid #002b19;
+    color: #fff;
+    background-color: #002b19;
+    border: 3px solid #d89c66;
     padding: 30px;
     transform: translate(-50%, -50%);
-    display: none;    
+    display: none;
 }
 
 .modal h3 {
@@ -218,6 +219,6 @@ body {
 .modal button {
     border: none;
     padding: 6px 10px;
-    background-color: #002b19;
+    background-color: #d89c66;
     color: #fff;
 }
