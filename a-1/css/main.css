@@ -202,10 +202,10 @@ body {
     height: 340px;
     color: #fff;
     background-color: #002b19;
-    border: 3px solid #d89c66;
+    border: 3px double #d89c66;
     padding: 30px;
     transform: translate(-50%, -50%);
-    display: none;
+    /* display: none; */
 }
 
 .modal h3 {
