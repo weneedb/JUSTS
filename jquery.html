@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="/a-1/sciript/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="/a-1/css/jquery.css">
+</head>
+<body>
+    <button id="showPopup">팝업창 보기</button>
+    <!-- show_popup (스네이크 케이스) = showPopup (카멜케이스) -->
+    <button class="btn1">버튼</button>
+    <button class="btn2">버튼2</button>
+     <p>안녕하세요</p>
+
+
+     <ul class="gnb">
+        <li><a href="#">뉴스</a>
+        <ul class="sub">
+            <li><a href="#">정치</a></li>
+            <li><a href="#">정치</a></li>
+            <li><a href="#">정치</a></li>
+            <li><a href="#">정치</a></li>
+            <li><a href="#">정치</a></li>
+        </ul>
+        </li>
+     </ul>
+
+
+    <div class="box">123</div>
+
+
+     <div class="popup">
+        <h2>안녕하세요</h2>
+        <button id="closePopup">닫기</button>
+     </div>
+
+
+    <script>
+        $(function(){
+            $(".btn1").click(function(){
+                $("p").hide()
+            })
+            $(".btn2").click(function(){
+                $("p").show()
+            })
+
+            // gnb
+            // $(".gnb").mouseenter(function(){
+            //     $(".sub").slideDown()
+            // })
+            // $(".gnb").mouseleave(function(){
+            //     $(".sub").slideUp()
+            // })
+
+            $(".gnb").hover(
+                function(){
+                    $(".sub").slideDown()
+                },
+                function(){
+                    $(".sub").slideUp()
+                }
+            )
+            // hover - menter+mleave ,
+
+            //box
+            $(".box").mouseenter(function(){
+                $(this).animate({width: 300, height: 300}, 1000, function(){
+                    console.log("안녕하세요")
+                }) 
+            // "px" "%" "단위" , 1000 = 1초 300 = 0.초
+            // jquert 단점 오타 찾기힘듬 react는 찾아줌
+            // $(this) = 자신 jquet
+            })
+
+            //modal
+            $("#showPopup").click(function(){
+                $(".popup").show()
+            })
+            $("#closePopup").click(function(){
+                $(".popup").hide()
+            })
+
+            // class= . id= #
+        });
+            // .....
+            // .....
+        
+        // $(function(){}) function = 함수
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

@@ -32,6 +32,7 @@ body {
 .gnb {
     display: flex;
     align-items: center;
+    z-index: 1;
 }
 
 .gnb > li {
@@ -58,7 +59,8 @@ body {
     width: 100%;
     text-align: center;
     border: 1px solid #002b19;
-    padding: 10px;
+    /* padding: 10px; */
+    background-color: #ddd;
 }
 
 .gnb .sub li a {
@@ -74,11 +76,16 @@ body {
 .slider {
     height: 300px;
     overflow: hidden;
+    position: relative;
 }
 
 
 
-.sliders {}
+.sliders {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 .slide {
     position: relative;
@@ -205,7 +212,7 @@ body {
     border: 3px double #d89c66;
     padding: 30px;
     transform: translate(-50%, -50%);
-    /* display: none; */
+    display: none;
 }
 
 .modal h3 {
@@ -221,4 +228,8 @@ body {
     padding: 6px 10px;
     background-color: #d89c66;
     color: #fff;
+}
+
+.modal button:hover {
+    text-decoration: underline;
 }
