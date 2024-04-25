@@ -6,6 +6,7 @@
     <title>JUST 쇼핑몰</title>
     <link rel="stylesheet" href="./css/main.css">
     <script src="./sciript/jquery-1.12.4.js"></script>
+    <script src="./sciript/main.js"></script>
 </head>
 <body>
         <div class="wrap">
@@ -113,62 +114,7 @@
                 <button id="closeModal">닫기</button>
             </div>
         </div>
-
-
-        <script>
-            $(function(){
-                // gnb
-                $(".gnb").hover(
-                    function(){
-                        $(".sub").stop().slideDown()
-                    },
-                    function(){
-                        $(".sub").stop().slideUp()
-                    }
-                )
-                // modal
-                $("#showModal").click(function(){
-                    $(".modal").show()
-                })
-                $("#closeModal").click(function(){
-                    $(".modal").hide()
-                })
-                // silde
-
-                // console.log ($(".sliders"))
-                // console.log ($(".slide"))
-                // console.log ($(".slide").eq(0))
-                // ㄴ확인용
-                // .stop() 중요
-                // 육각형/메소드/()마무리    
-
-                setInterval(function(){
-                    $(".sliders").animate({top: "-100%"}, function(){
-                        $(this).append($(".slide").eq(0))
-                        $(this).css("top", 0)  
-                    })
-                    }, 2000)
-                    
-                // tab
-                // console.log ($(".tap_title h3"))
-                // console.log ($(".tab_contents .item"))
-
-                $(".tab_title h3").click(function(){
-                $(".tab_title h3").removeClass("active")
-                $(this).addClass("active")
-
-                var idx = $(this).index()
-                        $(".tab_contents .item").hide()
-                        $(".tab_contents .item").eq(idx).show()
-               
-               
-                
-                // console.log(idx)
-                // console.log($(this).index())
-
-            })
-        })  
-        </script>
+         
 
 </body>
 </html>

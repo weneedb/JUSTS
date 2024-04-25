@@ -33,6 +33,22 @@ body {
     display: flex;
     align-items: center;
     z-index: 1;
+    position: relative;
+}
+
+.gnb::after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 1200px;
+    height: 0;
+    background-color: #eee;
+    transition: all 0.5s;
+}
+
+.gnb.on::after {
+    height: 216px;
 }
 
 .gnb > li {
@@ -58,9 +74,9 @@ body {
     left: 0;
     width: 100%;
     text-align: center;
-    border: 1px solid #002b19;
-    /* padding: 10px; */
-    background-color: #ddd;
+    padding: 10px;
+    z-index: 1;
+    /* 순서  */
 }
 
 .gnb .sub li a {
@@ -85,6 +101,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    display: flex;
 }
 
 .slide {
@@ -111,8 +128,6 @@ body {
     gap: 15px;
     padding: 10px 0px;
 }
-
-.tab {}
 
 .tab, .banner, .link {
     width: 390px;
