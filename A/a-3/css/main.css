@@ -35,24 +35,32 @@ body {
     z-index: 1;
 }
 
+.gnb a{
+    color: #333;
+
+}
+
 .gnb.on::after {
     height: 216px;
 }
 
 .gnb > li {
     position: relative;
+    width: 200px;
+    text-align: center;
 }
 
 .gnb > li > a {
     display: block;
-    height: 100px;
-    line-height: 100px;
-    padding: 0 50px;
+    height: 50px;
+    line-height: 50px;
+    margin: 50px 0px;
+    padding: 0px 20px;
 }
 
 .gnb > li:hover > a {
     color: #fff;
-    background-color: #002b19;
+    background-color: #1d2088;
 }
 
 .gnb .sub {
@@ -62,10 +70,9 @@ body {
     left: 0;
     width: 100%;
     text-align: center;
-    padding: 10px;
+    /* padding: 10px; */
     z-index: 1;
     background-color: #eee;
-    display: none;
     /* 순서  */
 }
 
@@ -75,7 +82,7 @@ body {
 }
 
 .gnb .sub li a:hover {
-    background-color: #002b19;
+    background-color: #1d2088;
     color: #fff;
 }
 
@@ -132,7 +139,7 @@ body {
 .tab_title {
     display: flex;
     gap: 4px;
-    border-bottom: 3px solid #002b19;
+    border-bottom: 3px solid #1d2088;
 }
 
 .tab_title h3 {
@@ -148,7 +155,7 @@ body {
 }
 
 .tab_title h3.active {
-    background-color: #002b19;
+    background-color: #1d2088;
     color: #fff;
 }
 
@@ -205,6 +212,7 @@ body {
 
 .footerMenu {
     flex: 1;
+    width: 1000px;
 }
 
 .fMenu {
@@ -213,10 +221,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.fMenu li {
-    border-right: solid 1px #999;
 }
 
 .fMenu li:last-child a {
@@ -241,28 +245,23 @@ body {
     font-size: 14px;
 }
 
-.familySite {
+.fLogo {
         width: 200px;
         display: flex;
         flex-direction: column;
         text-align: center;
         justify-content: center;
         gap: 8px;
-        border-left: 1px solid #999;
     }
-
-.familySite a:hover {
-    text-decoration: underline;
-}
 
 .modal {
     position: absolute;
     top: 30%;
     left: 50%;
-    width: 400px;
-    height: 340px;
+    width: 450px;
+    height: 300px;
     color: #fff;
-    background-color: #002b19;
+    background-color: #1d2088;
     border: 3px double #d89c66;
     padding: 30px;
     transform: translate(-50%, -50%);

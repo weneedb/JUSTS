@@ -5,7 +5,7 @@ $(function(){
             $(this).find(".sub").stop().slideDown()
         },
         function() {
-            $(this).find(".sub").stop().slideup()
+            $(this).find(".sub").stop().slideUp()
         }
     )    
     // modal
@@ -24,12 +24,20 @@ $(function(){
     // .stop() 중요
     // 육각형/메소드/()마무리    
 
+    // setInterval(function(){
+    //     $(".sliders").animate({left: "-100%"}, function(){
+    //         $(this).append($(".slide").eq(0))
+    //         $(this).css("left", 0)  
+    //     })
+    //     }, 2000)
+
+    $('.sliders a:gt(0)').hide();
+
     setInterval(function(){
-        $(".sliders").animate({left: "-100%"}, function(){
-            $(this).append($(".slide").eq(0))
-            $(this).css("left", 0)  
-        })
-        }, 2000)
+      $('sliders a:first-child').fadeOut()
+      .next('a').fadeIn()
+      .end().appendTo('.slide');
+    }, 3000);    
         
     // tab
     // console.log ($(".tap_title h3"))
