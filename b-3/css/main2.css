@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    color: #333;
+    background-color: #fff;
+}
+
+    /* 초기화설정 */
+
+.wrap {
+    width: 1200px;
+    /* 넓이 */
+    margin: 0 auto;
+    /* 중앙정렬 */
+}
+
+.heder {
+    display: flex;
+    align-items: center;
+    /* flex 일때 justify -content ( 가로축 - 중심축 )align-items ( 세로축 - 교차축 ) */
+    justify-content: space-between;
+    /* jcsb 양쪽끝정렬 */
+    height: 100px;
+    /* 높이 */
+}
+
